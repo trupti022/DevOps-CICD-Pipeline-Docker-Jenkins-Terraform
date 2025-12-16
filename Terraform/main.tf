@@ -48,7 +48,7 @@ resource "aws_security_group" "devops_sg" {
 }
 
 resource "aws_instance" "jenkins_ec2" {
-  ami                    = "ami-0c02fb55956c7d316"
+  ami                    = "ami-036841078a4b68e14"
   instance_type          = "t2.micro"
   key_name               = aws_key_pair.devops_key.key_name
   vpc_security_group_ids = [aws_security_group.devops_sg.id]
@@ -59,7 +59,7 @@ resource "aws_instance" "jenkins_ec2" {
 }
 
 resource "aws_instance" "k8s_node" {
-  ami                    = "ami-0c02fb55956c7d316"
+  ami                    = "ami-036841078a4b68e14"
   instance_type          = "t2.micro"
   key_name               = aws_key_pair.devops_key.key_name
   vpc_security_group_ids = [aws_security_group.devops_sg.id]
